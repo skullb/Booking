@@ -1,0 +1,11 @@
+Jeanne	Calment	53000	5	1
+Gerard	Lambert	89000	3	2
+Jean	Dupond	93000	3	3
+Patrick	Bruel	17000	1	4
+Georges	Dupond	72000	7	5
+Carole	Laure	65000	2	6
+Mireille	Goud	34000	3	7
+Richard	Gilbert	21000	6	8
+Charles	Perrin	42000	4	9
+Laura	Lemay	63000	3	10
+Anne	Sinclair	33000 2	11
