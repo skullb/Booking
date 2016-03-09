@@ -16,17 +16,8 @@ typedef struct FD {
 	int maxItems;
 } FileLineDescriptor;
 
-
-
-
-/* initialisation */
-void initFileListReader(const int pMaxSize);
-
 /* Lit le fichier passé en paramêtre ligne par ligne et stock le résultat dans une liste*/
-void readFile(const char *pFilePath, FileLineDescriptor **pColumnDescriptor);
-
-/* enregistrement de la ligne dans son model metier */
-void storeLine(idListe pListe, CellDescriptor pColumnPointer, int (*getSortPosition)());
+void readFile(const char *pFilePath, idListe pObject, FileLineDescriptor **pColumnDescriptor, void(*insertVoid) (idListe, refObjet));
 
 /* exporter la liste vers un nouveau fichier */
-void ecrireFichier(const char *pOutputFile, FileLineDescriptor **pColumnDescriptor);
+void ecrireFichier(const char *pOutputFile, idListe pObject, FileLineDescriptor **pColumnDescriptor);

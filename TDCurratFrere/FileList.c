@@ -11,8 +11,11 @@
 #define LGL 255
 
 
-/* Lit le fichier passé en paramêtre ligne par ligne et stock le résultat dans les pointeurs du descripteur de ligne*/
-void readFile(const char *pFilePath, FileLineDescriptor **pColumnDescriptor){
+/* Lit le fichier passé en paramêtre ligne par ligne et stock le résultat
+dans les pointeurs du descripteur de ligne*/
+void readFile(const char *pFilePath, idListe pObject, 
+	FileLineDescriptor **pColumnDescriptor, void (*insertVoid) (idListe, refObjet))
+{
 	int i, c, colSize, line=0, column;
 	FILE *file;
 	file = fopen(pFilePath, "r");
@@ -35,10 +38,16 @@ void readFile(const char *pFilePath, FileLineDescriptor **pColumnDescriptor){
 				column++;
 				token = strtok(NULL, pColumnDescriptor[line]->separator);
 			}
+
+			// insertion dans la liste
+			insertVoid(pObject, pColumnDescriptor[line]->refObject);
+
 			// ligne suivante
 			fgets(currentLine, LGL, file);
 			line++;
 		}
+		// libérer la ligne courrante
+		free(currentLine);
 
 		fclose(file);
 	}
@@ -46,6 +55,30 @@ void readFile(const char *pFilePath, FileLineDescriptor **pColumnDescriptor){
 
 
 /* exporter la liste vers un nouveau fichier */
-void ecrireFichier(const char *pOutputFile, FileLineDescriptor **pColumnDescriptor){
+void ecrireFichier(const char *pOutputFile, idListe pListe, 
+	FileLineDescriptor **pColumnDescriptor)
+{
+	FILE *file;
+	idElt item = premierElt(pListe);
+	int line = 0, column = 0;
+	char *currentLine = malloc(LGL*sizeof(char*));
+
+	file = fopen(pOutputFile, "w");
+
+	if (file){
+		while (item){
+			
+			for (column = 0; column < pColumnDescriptor[line]->nbColumns; column++){
+				strcat(currentLine,pColumnDescriptor[line]->columns[column].cellRef);
+				strcat(currentLine, pColumnDescriptor[line]->separator);
+			}
+			// ligne suivante
+			fprintf(file, "%s\n", currentLine);
+			line++;
+		}
+	}
+
+	free(currentLine);
+	fclose(file);
 
 }

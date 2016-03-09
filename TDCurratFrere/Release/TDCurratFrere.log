@@ -1,0 +1,43 @@
+﻿La génération a démarré 08/03/2016 21:50:10.
+     1>Projet "C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\TDCurratFrere\TDCurratFrere.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt Booking.c FileList.c listedble.c Util.c
+         Booking.c
+     1>Booking.c(131): warning C4133: 'fonction' : types incompatibles - de 'client *' à 'idElt'
+     1>Booking.c(147): warning C4047: '==' : les niveaux d'indirection de 'int' et de 'int (__cdecl *)(idListe)' sont différents
+     1>Booking.c(150): warning C4133: 'fonction' : types incompatibles - de 'client *' à 'idElt'
+     1>Booking.c(153): warning C4133: 'fonction' : types incompatibles - de 'client *' à 'idElt'
+     1>Booking.c(153): warning C4133: '=' : types incompatibles - de 'idElt' à 'client *'
+     1>Booking.c(161): warning C4133: 'fonction' : types incompatibles - de 'client *' à 'idElt'
+     1>Booking.c(165): warning C4133: 'fonction' : types incompatibles - de 'client *' à 'idElt'
+         FileList.c
+     1>FileList.c(18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(211) : voir la déclaration de 'fopen'
+     1>FileList.c(30): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(204) : voir la déclaration de 'strtok'
+     1>FileList.c(34): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : voir la déclaration de 'sscanf'
+     1>FileList.c(36): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(204) : voir la déclaration de 'strtok'
+     1>FileList.c(16): warning C4101: 'i' : variable locale non référencée
+     1>FileList.c(16): warning C4101: 'colSize' : variable locale non référencée
+     1>FileList.c(16): warning C4101: 'c' : variable locale non référencée
+         listedble.c
+         Util.c
+     1>Util.c(15): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : voir la déclaration de 'sscanf'
+     1>Util.c(19): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\stdio.h(304) : voir la déclaration de 'sscanf'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\Release\TDCurratFrere.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\Release\TDCurratFrere.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\Release\TDCurratFrere.lib" /MACHINE:X86 /SAFESEH Release\Booking.obj
+         Release\FileList.obj
+         Release\listedble.obj
+         Release\Util.obj
+         Génération de code en cours
+         Fin de la génération du code
+         TDCurratFrere.vcxproj -> C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\Release\TDCurratFrere.exe
+     1>Génération du projet "C:\Users\ben\Documents\Visual Studio 2013\Projects\TDCurratFrere\TDCurratFrere\TDCurratFrere.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:01.06
